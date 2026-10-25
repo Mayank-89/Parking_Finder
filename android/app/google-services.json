@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "309902060286",
+    "project_id": "smart-parking-finder-17fdf",
+    "storage_bucket": "smart-parking-finder-17fdf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309902060286:android:8dc74dc485fb3ef9b993af",
+        "android_client_info": {
+          "package_name": "com.example.parking_finder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwktJl-mVDbfgA-tAdMrpIVcyAOTL8fwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

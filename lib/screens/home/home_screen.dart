@@ -106,6 +106,7 @@ import '../../database/parking_data.dart';
 import '../../models/parking_model.dart';
 import '../booking/booking_screen.dart';
 import '../history/history_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 
 
@@ -121,6 +122,9 @@ class _HomeScreenState extends State<HomeScreen> {
   final MapController _mapController = MapController();
   final TextEditingController _searchController = TextEditingController();
   List<Parking> filteredParkingList = [];
+  Future<void> _logout() async {
+    await FirebaseAuth.instance.signOut();
+  }
 
   LatLng _currentLocation = const LatLng(28.6139, 77.2090);
   bool _locationLoaded = false;
@@ -279,6 +283,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          title: const Text("Smart Parking Finder"),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.logout),
+              onPressed: _logout,
+            ),
+          ],
+        ),
         // actions: [
         //   IconButton(
         //     icon: const Icon(Icons.history),
@@ -292,8 +304,7 @@ class _HomeScreenState extends State<HomeScreen> {
         //     },
         //   ),
         // ],
-        title: const Text("Smart Parking Finder"),
-      ),
+
       // body: FlutterMap(
       //   mapController: _mapController,
       //   options: MapOptions(
