@@ -43,3 +43,20 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Private keys and certificates
+*.pem
+*.p12
+*.key
+
+# Firebase service account credentials
+serviceAccountKey.json
+service-account*.json
+
+# Local IDE and OS files
+.vscode/
+.DS_Store
